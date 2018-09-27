@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Devil7.Examples.GSTINValidator.frm_Main
+            Me.MainForm = Global.Devil7.Examples.GSTINValidator.VB.frm_Main
         End Sub
     End Class
 End Namespace

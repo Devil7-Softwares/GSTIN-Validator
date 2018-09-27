@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DF1B3C75-FE20-4FA8-B9D6-34596B7155F3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Devil7.Examples.GSTINValidator.My.MyApplication</StartupObject>
-    <RootNamespace>Devil7.Examples.GSTINValidator</RootNamespace>
+    <StartupObject>Devil7.Examples.GSTINValidator.VB.My.MyApplication</StartupObject>
+    <RootNamespace>Devil7.Examples.GSTINValidator.VB</RootNamespace>
     <AssemblyName>GSTIN Validator - Example</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
@@ -73,11 +73,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frm_Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frm_Main.Designer.vb">
+      <DependentUpon>frm_Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GSTINValidator.vb" />
@@ -98,8 +98,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

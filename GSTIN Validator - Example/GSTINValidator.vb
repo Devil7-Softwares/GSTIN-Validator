@@ -35,10 +35,14 @@ Public Class GSTINValidator
     Public Shared Function IsValid(ByVal GSTIN As String) As Boolean
         Dim isValidFormat As Boolean = False
         GSTIN = GSTIN.Trim
-        If Regex.IsMatch(GSTIN, GSTIN_REGEX) Then
-            isValidFormat = GSTIN(GSTIN.Length - 1).Equals(GenerateCheckSum(GSTIN.Substring(0, GSTIN.Length() - 1)))
+        If String.IsNullOrEmpty(GSTIN) Then
+            Throw New Exception("GSTIN is empty")
         Else
-            Throw New Exception("GSTIN doesn't match the pattern")
+            If Regex.IsMatch(GSTIN, GSTIN_REGEX) Then
+                isValidFormat = GSTIN(GSTIN.Length - 1).Equals(GenerateCheckSum(GSTIN.Substring(0, GSTIN.Length() - 1)))
+            Else
+                Throw New Exception("GSTIN doesn't match the pattern")
+            End If
         End If
         Return isValidFormat
     End Function
@@ -64,6 +68,7 @@ Public Class GSTINValidator
             For j As Integer = 0 To cpChars.Length - 1
                 If cpChars(j) = inputChars(i) Then
                     codePoint = j
+                    Exit For
                 End If
             Next
             Dim digit As Integer = factor * codePoint

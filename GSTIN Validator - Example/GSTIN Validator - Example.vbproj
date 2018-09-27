@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DF1B3C75-FE20-4FA8-B9D6-34596B7155F3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>GSTIN_Validator___Example.My.MyApplication</StartupObject>
-    <RootNamespace>GSTIN_Validator___Example</RootNamespace>
+    <StartupObject>Devil7.Examples.GSTINValidator.My.MyApplication</StartupObject>
+    <RootNamespace>Devil7.Examples.GSTINValidator</RootNamespace>
     <AssemblyName>GSTIN Validator - Example</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
@@ -45,6 +45,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -115,6 +118,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
